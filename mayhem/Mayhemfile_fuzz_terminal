@@ -1,0 +1,10 @@
+project: savantenvs/FabGL
+target: fuzz_terminal
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_terminal/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_terminal
+    dictionary: /mayhem/mayhem/fuzz_terminal/fuzz_terminal.dict
+    libfuzzer: true
+    timeout: 30

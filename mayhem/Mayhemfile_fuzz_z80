@@ -1,0 +1,9 @@
+project: savantenvs/FabGL
+target: fuzz_z80
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_z80/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_z80
+    libfuzzer: true
+    timeout: 30

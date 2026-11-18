@@ -1,0 +1,9 @@
+project: savantenvs/FabGL
+target: fuzz_keyboard
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_keyboard/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_keyboard
+    libfuzzer: true
+    timeout: 30
